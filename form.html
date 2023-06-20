@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <link rel="stylesheet" href="stiles.css">
+    <title>Tablas de Registro</title>
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    </head>
+    <body>
+        <header class="header2">
+            <a href="menu.html" class="volver"> < volver </a>
+        </header>
+        <br>
+        
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+<div class=".search-containe">
+    <title>Formulario de Búsqueda</title>
+    <style>
+        form {
+            margin: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button[type="submit"] {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    </div>
+    </div>
+  
+
+    <form id="searchForm" onsubmit="search(event)">
+        <label for="searchInput">Buscar:</label>
+        <input type="text" id="searchInput">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="errorMessage" class="error-message"></div>
+    <script>
+        function search(event) {
+            event.preventDefault(); // Evita que se envíe el formulario automáticamente
+
+            var searchTerm = document.getElementById('searchInput').value;
+
+            // Validar el término de búsqueda
+            if (searchTerm.trim() === '') {
+                document.getElementById('errorMessage').textContent = 'Por favor, ingrese un dato correcto.';
+            } else {
+                // Aquí puedes realizar la lógica de búsqueda
+                document.getElementById('errorMessage').textContent = '';
+                // Resto de la lógica de búsqueda...
+            }
+        }
+    </script>
+    <h1>Tablas de Registro</h1>
+
+    <h2>Registro de Usuarios</h2>
+    <table id="tablaUsuarios">
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Producto comprado</th>
+        </tr>
+    </table>
+
+    <h2>Registro de Productos</h2>
+    <table id="tablaProductos">
+        <tr>
+            <th>Nombre del Producto</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+        </tr>
+    </table>
+
+    <script>
+        // Datos de ejemplo para las tablas
+        var usuarios = [
+            { nombre: 'John Doe', email: 'johndoe@gmail.com', fechaNacimiento: 'cambio de aceite' },
+            { nombre: 'Jane Smith', email: 'janesmith@gmail.com', fechaNacimiento: 'llantas' }
+        ];
+
+        var productos = [
+            { nombre: 'cambio de aceite', precio: '19.99', categoria: 'aceite' },
+            { nombre: 'llantas', precio: '59.99', categoria: 'llantas' }
+            ];
+
+// Función para cargar los datos en la tabla de usuarios
+function cargarDatosUsuarios() {
+    var tablaUsuarios = document.getElementById('tablaUsuarios');
+    usuarios.forEach(function(usuario) {
+        var fila = tablaUsuarios.insertRow();
+        var nombreCell = fila.insertCell(0);
+        var emailCell = fila.insertCell(1);
+        var fechaCell = fila.insertCell(2);
+        nombreCell.textContent = usuario.nombre;
+        emailCell.textContent = usuario.email;
+        fechaCell.textContent = usuario.fechaNacimiento;
+    });
+}
+
+        // Función para cargar los datos en la tabla de productos
+        function cargarDatosProductos() {
+            var tablaProductos = document.getElementById('tablaProductos');
+            productos.forEach(function(producto) {
+                var fila = tablaProductos.insertRow();
+                var nombreCell = fila.insertCell(0);
+                var precioCell = fila.insertCell(1);
+                var categoriaCell = fila.insertCell(2);
+                nombreCell.textContent = producto.nombre;
+                precioCell.textContent = producto.precio;
+                categoriaCell.textContent = producto.categoria;
+            });
+        }
+
+        // Llamar a las funciones para cargar los datos en las tablas
+        cargarDatosUsuarios();
+        cargarDatosProductos();
+    </script>
+        <script>
+            window.onload = function() {
+                cargarTablaVentas();
+            };
+    
+            function cargarTablaVentas() {
+                var ventas = [
+                    { producto: 'cambio de aceite', cantidad: 2 },
+                    { producto: 'llantas', cantidad: 3 },
+                    
+                ];
+    
+                var table = document.getElementById('tabla-ventas');
+    
+                for (var i = 0; i < ventas.length; i++) {
+                    var venta = ventas[i];
+                    var row = table.insertRow();
+    
+                    var productoCell = row.insertCell();
+                    productoCell.textContent = venta.producto;
+    
+                    var cantidadCell = row.insertCell();
+                    cantidadCell.textContent = venta.cantidad;
+                }
+            }
+        </script>
+    
+        <h1>Tabla de Ventas</h1>
+    
+        <table id="tabla-ventas">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos de las ventas se cargarán aquí -->
+            </tbody>
+        </table>
+    
+    
+</body>
+</html>

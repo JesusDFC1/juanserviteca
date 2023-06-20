@@ -1,0 +1,169 @@
+*{font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+  
+
+
+h1 {
+text-align: center;
+}
+
+.table-container {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+}
+
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+th {
+background-color: #f2f2f2;
+}
+
+tr:hover {
+background-color: #f5f5f5;
+}
+
+.error-message {
+color: red;
+margin-top: 10px;
+text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.header2{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 10%;
+    background:#c6c6c6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  header{
+    background: #888484;
+  }
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo{
+    font-weight: 600;
+    line-height: 0.8;
+    align-content: center;
+}
+.volver{
+    font-size: 20px;
+    color: #1368e7;
+    text-decoration: none;
+    font-weight: 400;
+  
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction:column;
+    max-width: 300px;
+    margin: 10% auto;
+    background: transparent;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input {
+    padding: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  #success-message {
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    display: none;
+  }
+  
+  .body2{
+    display: grid;
+    place-items: center;
+    background: url(https://s1.1zoom.me/b5354/961/Porsche_911_Turbo_S_TechArt_2019_GT_Street_RS_580392_2560x1440.jpg)no-repeat;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+
+    }
+    .h12{
+        background:transparent;
+        color: rgb(239, 251, 251);
+    }
+  
+  
